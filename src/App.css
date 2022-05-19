@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.containerMain{
+  padding: 30px;
+  background-color: white;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header1{
+  text-align:center;
+  font-size:25px;
+}
+.ipContainer{
+  border:1px solid LightGray ;
+  border-radius:5px;
+  padding: 10px 20px 15px;
+  margin:20px 20px 30px;
+}
+.ipIcon{
+  color:white;
+  background-color: LightSeaGreen  ;
+  size: 26px;
+  border-radius:5px;
+  padding: 3px;
+}
+.ip{
+  width:100%;
+  border: 1px solid LightGray;
+  border-radius:5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.addBtn{
+  background-color:LightSeaGreen ;
+  width: 100%;
+  border:none ;
+  border-radius:5px;
   color: white;
+  padding:10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+.header2{
+  margin-top: 50px;
+  text-align:center;
+  font-size:25px;
+}
+.list{
+  margin:5px 30px;
+}
+.todo {
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+  justify-content: space-between;
+  border: 1px solid LightGray;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.regCheckSqIcon{
+  color: green;
+  width: 20px;
+  height: 20px;
+}
+.regSqIcon{
+  color: grey;
+  width: 20px;
+  height: 20px;
+}
+.editIcon{
+  color:orange;
+  width: 20px;
+  height: 20px;
+  margin: 0px 3px;
+}
+.deleteIcon{
+  color:red;
+  width: 20px;
+  height: 20px;
+}
+.btnContainer{
+  display: flex;
+  margin: 30px;
+  justify-content: space-between;
+}
+.btn{
+  width: 47%;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
 }
