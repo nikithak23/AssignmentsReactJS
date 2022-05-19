@@ -11,15 +11,24 @@
 .ipContainer{
   border:1px solid LightGray ;
   border-radius:5px;
-  padding: 10px 20px 15px;
+  padding: 10px 20px 15px 20px;
   margin:20px 20px 30px;
+}
+.ipContIn{
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
 }
 .ipIcon{
   color:white;
   background-color: LightSeaGreen  ;
-  size: 26px;
-  border-radius:5px;
-  padding: 3px;
+  width: 27px;
+  height: 32px;
+  padding: 1px;
+  margin-top: -10px;
 }
 .ip{
   width:100%;

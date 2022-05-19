@@ -34,7 +34,7 @@ function TodoInput({ addTodo }) {
   };
   return (
     <Form className="ipContainer" onSubmit={handleSubmit}> 
-      <div>
+      <div className="ipContIn">
         <MdArticle className="ipIcon"/>
         <input type="text" className="ip" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new todo" />
       </div>
