@@ -12,7 +12,7 @@
   border:1px solid LightGray ;
   border-radius:5px;
   padding: 10px 20px 15px;
-  margin:20px 20px 30px;
+  margin:20px 0px 30px;
 }
 .ipContIn{
   width: 100%;
@@ -56,7 +56,7 @@
   font-size:25px;
 }
 .list{
-  margin:5px 30px;
+  margin:5px 20px;
 }
 .todo {
   align-items: center;
@@ -90,7 +90,7 @@
 }
 .btnContainer{
   display: flex;
-  margin: 30px;
+  margin: 30px 20px 20px;
   justify-content: space-between;
 }
 .btn{
@@ -100,4 +100,28 @@
   border: none;
   border-radius: 5px;
   padding: 10px;
+}
+.allBtn{
+  width:30%;
+  background-color:LightSeaGreen ;
+  border:none ;
+  border-radius:5px;
+  color: white;
+  padding:10px;
+}
+.doneBtn{
+  width:30%;
+  background-color:LightSeaGreen ;
+  border:none ;
+  border-radius:5px;
+  color: white;
+  padding:10px;
+}
+.todoBtn{
+  width:30%;
+  background-color:LightSeaGreen ;
+  border:none ;
+  border-radius:5px;
+  color: white;
+  padding:10px;
 }

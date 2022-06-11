@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import "./App.css";
-import { Form } from 'react-bootstrap';
+import {  Form } from 'react-bootstrap';
 import { FaRegCheckSquare, FaRegSquare, IconName } from "react-icons/fa";//initiall just mention-->import { IconName} from "react-icons/fa"; ->rest of them will import thmselves
 import { IconName1, MdArticle, MdDelete, MdModeEditOutline } from "react-icons/md"; // initiall just mention-->import { IconName1 } from "react-icons/md";  ->rest of them will import thmselves
 
@@ -21,6 +21,15 @@ function Todo({ todo, index, markTodo, removeTodo }) {
   );
 }
 
+function Buttons({doneTodos,todoTodos}){
+  return(
+    <div className="btnContainer">
+    <button className="allBtn" >All</button>
+    <button className="doneBtn" onClick={doneTodos}>Done</button>
+    <button className="todoBtn" onClick={todoTodos}>Todo</button>
+    </div>
+  )
+}
 
 
 function TodoInput({ addTodo }) {
@@ -43,6 +52,8 @@ function TodoInput({ addTodo }) {
   );
 }
 
+
+
 function App() {
   const [todos, setTodos] = useState([
     // {
@@ -50,6 +61,8 @@ function App() {
     //   isDone: false
     // }
   ]);
+  const [done,setDone]=useState([]);
+  const [tobedone,setTobeDone]=useState([]);
 
   const addTodo = text => {
     const newTodos = [...todos, { text }];
@@ -67,11 +80,26 @@ function App() {
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
+  const doneTodos=()=>{
+    const newTodos =todos.filter((item)=>{
+      return item.isDone;
+    });
+    setDone(newTodos);
+    console.log('Done:',newTodos)
+  }
+  const todoTodos=()=>{
+    const newTodos =todos.filter((item)=>{
+      return !item.isDone;
+    });
+    setTobeDone(newTodos)
+    console.log('Todo:',newTodos);
+  }
   const deleteDone=()=>{
     const newTodos=todos.filter((item)=>{
       return !item.isDone;
     });
     setTodos(newTodos);
+    console.log(newTodos)
   }
   const deleteAll=()=>{
     const newTodos=[];
@@ -87,7 +115,8 @@ function App() {
         {todos.length>0?(
         <div>
         <h1 className="header2">TodoList</h1>
-          {todos.map((todo, index) => (
+        <Buttons doneTodos={doneTodos} todoTodos={todoTodos}/>
+            {todos.map((todo, index) => (
             <div className="list">
                 <Todo
                 key={index}
