@@ -1,0 +1,23 @@
+.dropDownContainer{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0px 0px
+}
+.dropDownHeader{
+    font-size: 15px;
+    font-weight:bold;
+    margin-bottom: 7px;
+}
+.dropDown{
+    border: 1px solid LightGray; 
+    padding: 3px;
+    font-size: 15px;
+    font-weight: 500;
+}
+@media only screen and (max-width: 600px){
+    .dropDown,.dropDownHeader{
+        font-size: 12px;
+        font-weight: 500;
+    }
+}

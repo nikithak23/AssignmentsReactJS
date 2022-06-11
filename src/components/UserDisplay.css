@@ -1,0 +1,47 @@
+.listContainer{
+    width: 100%;
+    margin-top: 30px;
+}
+.list{
+    background-color:whitesmoke;
+    margin: 10px 0px;
+    padding: 10px 120px 10px 10px;
+    border:1px solid LightGray; 
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.listLeft{
+    display: flex;
+    align-items: center;
+}
+.userImg{
+    border: none;
+    border-radius: 10px;
+    width:50px;
+    height: 50px;
+}
+.userName{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+.userEmail{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 650px){
+    .list{
+    flex-direction:column;
+    padding: 5px 5px 5px 5px;
+    }
+    .listLeft{
+        flex-direction:column;
+    }
+    .userEmail,.userName{
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
