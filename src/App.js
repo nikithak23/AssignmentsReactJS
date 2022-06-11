@@ -2,6 +2,8 @@ import React,{useState,createContext} from "react";
 import axios from "axios";
 import "./App.css";
 import UserDisplay from './components/UserDisplay';
+import RadioButtons from "./components/RadioButtons";
+import DropDown from "./components/DropDown";
 
 const baseURL = "https://randomuser.me/api/?results=10";
 export const UserContext=createContext(null);
@@ -34,15 +36,16 @@ const usersData = Users?.results;
     <UserContext.Provider value={{usersData,gender,location}}> 
     {/* all the children components within this function(in this case <UserDisply>) can use these data(userData,gender,location) using useContext in the resp components file */}
     <div className="mainContainer">
-      <div className="radioContainer" onChange={(e)=>{setGender(e.target.value)}}>
+      {/* <div className="radioContainer" onChange={(e)=>{setGender(e.target.value)}}>
         <div className="gender"><input type="radio" value="male" name="gender" /> Male</div>
         <div className="gender"><input type="radio" value="female" name="gender" /> Female</div>
         <div className="gender"><input type="radio" value="all" name="gender" defaultChecked/> All</div>
-      </div>
+      </div> */}
       {/* {console.log(gender)} */}
 
+      <RadioButtons onChange={(e)=>{setGender(e.target.value)}}/>
 
-      <div className="dropDownContainer" onChange={(e)=>{setLocation(e.target.value)}}>
+       {/* <div className="dropDownContainer" onChange={(e)=>{setLocation(e.target.value)}}>
         <div className="dropDownHeader">Select Nationality:</div>
         <select className="dropDown" value={location}>
           {usersData?.map(item => {
@@ -50,7 +53,8 @@ const usersData = Users?.results;
               })}
               <option key='all' value='all'>All</option>
         </select>
-      </div>
+            </div>  */}
+      <DropDown onChange={(e)=>{setLocation(e.target.value)}} value={location}/> 
 
       <UserDisplay/>
       

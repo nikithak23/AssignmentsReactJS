@@ -5,7 +5,8 @@ import { UserContext } from "../App"; //userdata objecct from the api has been s
 
 export default function UserDisplay(){
 
-var {usersData, gender, location}=useContext(UserContext);
+var {usersData,gender,location}=useContext(UserContext);
+
 //console.log('Gender:',gender);
 //console.log('Location:',location);
 //console.log('UsersData in userdetails.js:',usersData);
