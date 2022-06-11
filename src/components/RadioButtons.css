@@ -1,0 +1,15 @@
+.radioContainer{
+    display:flex;
+    flex-direction: column;
+}
+.gender{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 2px 0px;
+}
+@media only screen and (max-width: 600px){
+    .gender{
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
